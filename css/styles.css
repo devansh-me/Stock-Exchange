@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+}
+.marquee-wrapper {
+  /*flex*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  /*styles*/
+  border-top: 2px dashed rgb(10, 10, 10);
+  border-bottom: 2px dashed rgb(10, 10, 10);
+  background-color: rgb(15, 15, 15);
+  overflow: hidden;
+  height: 40px;
+}
+.symbol-marquee {
+  padding: 2px 8px 1px 10px;
+  font-family: "lato";
+  font-weight: bold;
+  color: white;
+  float: left;
+  width: 50%;
+}
+.price-marquee {
+  padding: 10px 10px 30px 0px;
+  font-family: "lato";
+  font-weight: bold;
+  float: left;
+  width: 50%;
+}
+.symbol-marquee,
+.price-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-1000px);
+  }
+}
+.page-wrapper {
+  width: 100vw;
+  margin-top: 60px;
+}
+h1 {
+  font-family: "Lato";
+  width: 100%;
+  text-align: center;
+}
+.searchbar-wrapper {
+  /*flex*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  /*styles*/
+  width: 100%;
+}
+.searchbar {
+  /*display*/
+  display: flex;
+  flex-direction: row;
+}
+input {
+  width: 600px;
+  height: 30px;
+  padding-left: 10px;
+  margin-right: 10px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  border-style: hidden;
+  background-color: rgb(226, 222, 222);
+  font-family: "Lato";
+}
+::placeholder {
+  font-family: "Lato";
+  font-size: large;
+  color: rgb(87, 84, 84);
+  padding-left: 10px;
+}
+.button-click {
+  width: 40px;
+  height: 40px;
+  margin-top: -5px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(158, 187, 231);
+}
+.button-click:hover {
+  cursor: pointer;
+  background-color: rgb(197, 216, 245);
+}
+.button-click:active {
+  cursor: pointer;
+  background-color: rgb(177, 191, 214);
+}
+
+.loading {
+  display: none;
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  width: 70px;
+  height: 70px;
+  border: 2px solid rgb(158, 187, 231);
+  border-top-color: rgb(233, 95, 95);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 100;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.results-list {
+  /*flex*/
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-left: 40%;
+  position: relative;
+}
+.company-image-search {
+  width: 33px;
+  height: 33px;
+  margin: 12px 300px 7px -30px;
+  position: absolute;
+}
+.company-name {
+  margin: 15px;
+  font-family: "lato";
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+}
+.company-name:hover {
+  cursor: pointer;
+  color: rgb(133, 169, 224);
+  font-weight: bold;
+}
+.symbols {
+  font-family: "lato";
+  text-decoration: none;
+}
+.stock-changes-searchbar {
+  font-family: "lato";
+  margin-left: 5px;
+}
+.page-company-wrapper {
+  /*flex*/
+  display: flex;
+  flex-direction: column;
+  /*styles*/
+  width: 100vw;
+  font-family: "lato";
+}
+.changePositive {
+  color: rgb(93, 173, 110);
+  margin-top: 20px;
+}
+.changeNegative {
+  color: rgb(199, 71, 71);
+  margin-top: 20px;
+}
+#title {
+  display: none;
+}
+#companyImage {
+  width: 65px;
+  height: 65px;
+  margin: 30px 0 0 40px;
+  position: absolute;
+}
+#companyName {
+  /*flex*/
+  align-self: left;
+  justify-self: left;
+
+  /*styles*/
+  text-align: left;
+  text-decoration: wavy;
+  text-decoration-color: rgb(131, 160, 194);
+  margin: 50px 90px 0 150px;
+  font-family: "lato";
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(47, 48, 49);
+  position: absolute;
+}
+#companyName:hover {
+  font-weight: bolder;
+  font-size: x-large;
+  color: rgb(97, 159, 230);
+}
+
+#companyDescription {
+  /*flex*/
+  align-self: left;
+  justify-self: left;
+
+  /*styles*/
+  width: 30%;
+  text-align: justify;
+  margin: 200px 50px 0 100px;
+  padding: 15px;
+  border-top: 2px dotted rgb(115, 173, 211);
+  border-bottom: 2px dotted rgb(115, 173, 211);
+  font-family: "lato";
+  line-height: 30px;
+  position: absolute;
+}
+
+#stockPrice {
+  /*flex*/
+  align-self: flex-end;
+  justify-self: right;
+
+  /*styles*/
+  font-size: large;
+  font-weight: bold;
+  position: absolute;
+  top: 50px;
+  left: 890px;
+}
+
+#stockChangesPercentage {
+  /*flex*/
+  align-self: flex-end;
+  justify-self: right;
+
+  /*styles*/
+  font-size: large;
+  position: absolute;
+  top: 50px;
+  right: 580px;
+}
+#chartData {
+  width: 550px;
+  height: 80px;
+  margin-top: 200px 50px 0 50px;
+  position: absolute;
+  left: 50%;
+  top: 21%;
+}
+.highlight {
+  background-color: rgb(248, 248, 11);
+}

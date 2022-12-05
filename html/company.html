@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Company</title>
+    <link rel="icon" href="../images/candlestick-chart.png" id="favicon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div id="pageCompanyWrapper" class="page-company-wrapper">
+      <div id="title"></div>
+      <img id="companyImage" />
+      <img id="imageDefault" />
+      <a id="companyName" target="_blank"></a>
+      <div id="companyDescription"></div>
+      <div id="stockPrice"></div>
+      <div id="stockChangesPercentage"></div>
+    </div>
+    <div id="chartData">
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+    <script src="../js/company.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Exchange</title>
+    <link rel="icon" href="./images/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div id="marqueeWrapper" class="marquee-wrapper"></div>
+    <div class="page-wrapper">
+      <h1>Search Nasdaq Stocks</h1>
+      <div class="searchbar-wrapper">
+        <div class="searchbar">
+          <input type="text" id="userInput" placeholder="Search..." />
+          <button class="button-click" id="buttonClick">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+      </div>
+      <div class="loading" id="loading"></div>
+      <div class="results-wrapper" id="resultsWrapper">
+        <div class="results-list" id="resultsList">
+          <img id="imageSearch" />
+          <div id="companyImage"></div>
+          <div class="company-name" id="companyNameSearchbar"></div>
+          <div class="symbols" id="symbols"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+    <h2 style="text-align: center;">©Devansh Choudhury</h2>
+  </body>
+</html>
